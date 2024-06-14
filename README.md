@@ -43,3 +43,19 @@ WHERE {
 }
 LIMIT 100
 ```
+
+### Consultas federadas BVMC-Mnemosine, obras de la Biblioteca Virtual Miguel de Cervantes de los autores incluidos en Mnemosine ([ver en Wikidata](https://w.wiki/APJK))
+
+```
+SELECT ?sLabel ?s ?mnemosine ?bvmc ?workBvmc ?workTitle WHERE {
+  ?s wdt:P10373 ?mnemosine .
+  ?s wdt:P2799 ?bvmc .
+  BIND(uri(concat("https://data.cervantesvirtual.com/person/", ?bvmc)) as ?bvmcID) 
+  SERVICE <http://data.cervantesvirtual.com/openrdf-sesame/repositories/data> {
+    ?bvmcID <http://rdaregistry.info/Elements/a/authorOf> ?workBvmc .
+    ?workBvmc rdfs:label ?workTitle        
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 100
+```
