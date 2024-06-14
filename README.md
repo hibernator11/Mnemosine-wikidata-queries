@@ -62,3 +62,7 @@ SELECT ?sLabel ?s ?mnemosine ?bvmc ?workBvmc ?workTitle WHERE {
 }
 LIMIT 100
 ```
+
+### Referencias
+
+- https://github.com/Biblioteca-Digital-Mnemosine/Data-Set
