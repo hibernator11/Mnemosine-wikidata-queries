@@ -44,7 +44,7 @@ WHERE {
 LIMIT 100
 ```
 
-<img src="mapa.png">
+<img src="mapa.png" width="50%">
 
 
 ### Consultas federadas BVMC-Mnemosine, obras de la Biblioteca Virtual Miguel de Cervantes de los autores incluidos en Mnemosine ([ver en Wikidata](https://w.wiki/APJK))
