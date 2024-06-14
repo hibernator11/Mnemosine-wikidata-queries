@@ -15,7 +15,7 @@ WHERE {
 LIMIT 100
 ```
 
-### Comparación género ([ver en Wikidata](https://w.wiki/APJ4))
+### Comparación del género de los autores ([ver en Wikidata](https://w.wiki/APJ4))
 ```
 #defaultView:BarChart
 SELECT ?genero ?generoLabel (COUNT(?s) AS ?count)
@@ -29,7 +29,7 @@ GROUP BY ?genero ?generoLabel
 ORDER BY DESC(?count)
 ```
 
-### Nacionalidades de los autores ([ver en Wikidata](https://w.wiki/APHk))
+### Nacionalidades de los autores representado en un mapa ([ver en Wikidata](https://w.wiki/APHk))
 ```
 #defaultView:Map
 SELECT ?s ?sLabel ?nationalityLabel ?img ?coord
@@ -43,6 +43,9 @@ WHERE {
 }
 LIMIT 100
 ```
+
+<img src="mapa.png">
+
 
 ### Consultas federadas BVMC-Mnemosine, obras de la Biblioteca Virtual Miguel de Cervantes de los autores incluidos en Mnemosine ([ver en Wikidata](https://w.wiki/APJK))
 
