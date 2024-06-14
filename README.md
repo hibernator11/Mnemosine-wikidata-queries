@@ -1,7 +1,7 @@
 # Mnemosine-wikidata-queries
 Ejemplos de consultas basadas en Wikidata para explorar los datos proporcionados por la biblioteca [Mnemosine](http://repositorios.fdi.ucm.es/mnemosine/).
 
-### Lista de autores enlazados a Wikidata [ver en Wikidata](https://w.wiki/APHu)
+### Lista de autores enlazados a Wikidata ([ver en Wikidata](https://w.wiki/APHu))
 
 ```
 SELECT ?s ?sLabel ?nationalityLabel ?img 
@@ -15,7 +15,7 @@ WHERE {
 LIMIT 100
 ```
 
-### Comparación género [ver en Wikidata](https://w.wiki/APJ4)
+### Comparación género ([ver en Wikidata](https://w.wiki/APJ4))
 ```
 #defaultView:BarChart
 SELECT ?genero ?generoLabel (COUNT(?s) AS ?count)
@@ -29,7 +29,7 @@ GROUP BY ?genero ?generoLabel
 ORDER BY DESC(?count)
 ```
 
-### Nacionalidades de los autores [ver en Wikidata](https://w.wiki/APHk)
+### Nacionalidades de los autores ([ver en Wikidata](https://w.wiki/APHk))
 ```
 #defaultView:Map
 SELECT ?s ?sLabel ?nationalityLabel ?img ?coord
